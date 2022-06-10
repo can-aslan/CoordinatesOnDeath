@@ -17,13 +17,16 @@ public class DeathHandler implements Listener {
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
-        Location eyeLocation = event.getEntity().getEyeLocation();
+        Player player = event.getEntity();
+        Location eyeLocation = player.getEyeLocation();
+        String name = player.getDisplayName();
+
         String deathMsg = (
                 " died at X = " + eyeLocation.getBlockX()
                 + ", Y = " + eyeLocation.getBlockY()
                 + ", Z = " + eyeLocation.getBlockZ() + ".");
 
-        Bukkit.getLogger().info((PREFIX + ((Player) event.getEntity()).getDisplayName()) + deathMsg);
+        Bukkit.getLogger().info(PREFIX + name + deathMsg);
         event.getEntity().sendMessage(PREFIX + "You" + deathMsg);
     }
 }
