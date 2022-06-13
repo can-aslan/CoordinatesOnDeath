@@ -1,6 +1,7 @@
 package coordinatesondeath.coordinatesondeath.updatecheck;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.io.IOException;
@@ -24,7 +25,7 @@ public class UpdateChecker {
                 }
             }
             catch (IOException e) {
-                plugin.getLogger().info("ERROR: Cannot check for updates: " + e.getMessage());
+                plugin.getLogger().info(ChatColor.RED +"ERROR: Cannot check for updates: " + e.getMessage());
             }
         });
 
