@@ -25,7 +25,7 @@ public class UpdateChecker {
                 }
             }
             catch (IOException e) {
-                plugin.getLogger().info(ChatColor.RED +"ERROR: Cannot check for updates: " + e.getMessage());
+                plugin.getLogger().info("ERROR: Cannot check for updates: " + e.getMessage());
             }
         });
 
