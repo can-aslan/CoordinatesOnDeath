@@ -1,5 +1,5 @@
 name: CoordinatesOnDeath
-version: 'v0.1.0-beta'
+version: 'v0.1.1-beta'
 main: coordinatesondeath.coordinatesondeath.CoordinatesOnDeath
 api-version: 1.18
 description: Displays the death coordinates of players to them upon death.
